@@ -1,0 +1,121 @@
+header {
+    width: 100vw;
+    height: 6.3rem;
+    background-color: var(--yellow);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.041);
+}
+
+nav {
+    max-width: 1200px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: auto;
+    padding-top: .5rem;
+}
+
+.navContainer {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
+    gap: 1rem;
+}
+.ad {
+    max-width: 390px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navContainer img {
+    width: 134px;
+    height: 34px;
+}
+
+.inputContainer {
+    max-width: 580px;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    background-color: #FFFF;
+    border-radius: .2rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .12);
+
+}
+
+.inputContainer>svg {
+    color: gray;
+    padding: 0 .6rem;
+    font-size: 2.6rem;
+    border-left: 1px solid rgba(0, 0, 0, 0.13);
+}
+
+.inputContainer>input {
+    height: 100%;
+    width: 100%;
+    padding: 0 1rem;
+    border: none;
+    font-weight: 300;
+    outline: none;
+}
+
+.inputContainer>input::placeholder {
+    opacity: .4;
+}
+
+.menuContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.CEP {
+    display: flex;
+}
+
+.CEP>p {
+    font-size: .7rem;
+    color: rgba(0, 0, 0, 0.349);
+}
+
+.CEP>p>strong {
+    color: rgba(0, 0, 0, 0.733);
+    font-weight: 500;
+    font-size: .8rem;
+}
+
+.CEP>svg {
+    color: rgba(0, 0, 0, 0.568);
+    font-size: 1.4rem;
+}
+
+.menuList {
+    gap: 1rem;
+    display: flex;
+    align-items: flex-end;
+}
+.menuList > li> a {
+    font-size: .840rem;
+    color: rgba(0, 0, 0, 0.514);
+    font-weight: 300;
+}
+.menuRight{
+    display: flex;
+    justify-content: flex-end;
+}
+.menuRight > li > a{
+    color: rgba(0, 0, 0, 0.651);
+    font-weight: 500;
+}
+.navRight > .ad {
+    height: 40px;
+}
+.logoAndLocation,
+.middleNav,
+.navRight {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+}
