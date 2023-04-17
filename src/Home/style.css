@@ -1,0 +1,175 @@
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+.slidePromotion{
+    margin-bottom: 3rem;
+}
+.imageSlide{
+    object-fit: cover;
+    width: 100%;
+}
+.creditCard {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 3px #0000002b;
+    border-radius: 0.3rem;
+    position: relative;
+    padding-right: 2rem;
+    gap: .5rem;
+    margin: 2rem 0;
+
+}
+.creditCard::after {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 90%;
+    position: absolute;
+    background-color: var(--blue);
+    top: .25rem;
+    left: .3rem;
+}
+
+.firstElement {
+    padding: 1.2rem 1rem;
+    border-right: 1px solid rgba(128, 128, 128, 0.411);
+}
+
+.firstElement>h3 {
+    font-weight: 100;
+    color: black;
+}
+
+.firstElement>span {
+    font-size: .8rem;
+    font-weight: 100;
+    color: rgba(128, 128, 128, 0.664);
+}
+
+.lastElement {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}
+
+.lastElement>div {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(128, 128, 128, 0.281);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 1rem;
+    justify-self: flex-end;
+}
+
+.lastElement>div>svg {
+    font-size: 1.5rem;
+    background-color: var(--blue);
+    border-radius: 50%;
+    color: white;
+}
+.listOffer{
+    width: 100%;
+}
+.advertising{
+    width: 100%;
+    box-shadow: 1px 1px 2px #00000024;
+    border-bottom-left-radius: .3rem;
+    border-bottom-right-radius: .3rem;
+}
+.headerAdvertising{
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 1.1rem;
+    border-top-right-radius: .3rem;
+    border-top-left-radius: .3rem;
+    justify-content: space-between;
+    background: -webkit-linear-gradient(left,#a90f90 55%,#0c1a51);
+}
+.headerAdvertising > h1 {
+    font-size: 1.4rem;
+}
+.discountAdvertising > span{
+    display: block;
+    border-left: .15rem solid white;
+    padding-left: .5rem;
+    font-weight: 100;
+}
+.discountAdvertising > span:nth-child(1){
+    text-decoration: line-through;
+    font-size: .9rem;
+}
+.discountAdvertising > span:nth-child(2){
+    font-weight: bolder;
+}
+.advertising{
+    background-color: white;
+}
+.descAdvertising{
+    padding: 1rem;
+    height: 3rem;
+}
+.descAdvertising > h1 {
+    font-weight: 100;
+}
+.sponsors{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2rem;
+}
+.sponsors > .creditSession{
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+.btnAd{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem 2rem;
+    border-top: 1px solid rgba(128, 128, 128, 0.219);
+}
+.btnAd > button{
+    padding: 0.7rem 1.3rem;
+    background-color: var(--blue);
+    border: none;
+    color: white;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+.btnAd > button:hover{
+    background-color: var(--deepBlue);
+}
+.sponsors{
+    padding: 1rem;
+}
+.sponsors > .creditSession > .desc > h3{
+    font-size: .9rem;
+}
+.marketPoints{
+    height: 256px;
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+
+}
+
+.marketItemsContainer {
+    display: flex;
+    gap: 1rem;
+    width: 100%;
+    height: 256px;
+}
+.marketItemsContainer .itemsMarket {
+    flex: 1;
+    background-color: #a90f8fc4;
+    border-radius: .5rem;
+}

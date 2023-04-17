@@ -1,8 +1,9 @@
 :root {
     --bg: #EBEBEB;
     --yellow: #fff159;
-    --green: #00A650;
-    --blue: #4E82CE;
+    --green: #00a650;
+    --blue: #3483fa;
+    --deepBlue: #2c68c2;
     --gray: #B3B3B3
 }
 
@@ -10,8 +11,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     list-style: none;
     text-decoration: none;
+}
+body{
+    overflow-x: hidden;
+}
+.App{
+    background-color: var(--bg);
+    min-height: 100vh;
+    width: 100vw;
 }

@@ -1,0 +1,27 @@
+.offerDay{
+    width: 100%;
+    padding-top: 1rem;
+}
+.titleOffer {
+    padding-bottom: 1rem;
+}
+.titleOffer > h1 {
+    font-weight: 300;
+    display: inline;
+    margin-right: 1rem;
+    font-size: 1.4rem;
+    opacity: .6;
+}
+.titleOffer > a{
+    color: var(--blue);
+    font-weight: 300;
+    font-size: .8rem;
+    color: var(--blue);
+    text-decoration: none;
+    transition: .1s;
+    font-weight: 500;
+}
+.titleOffer > a:hover{
+    color: var(--deepBlue);
+    transition: .1s;
+}

@@ -1,0 +1,54 @@
+.Product{
+    height: 330px;
+    width: 224px;
+    background-color: white;
+    box-shadow: 1px 1px 2px #00000024;
+    border-radius: .3rem;
+    overflow: hidden;
+    transition: height 100ms ease-in;
+    color: rgba(0, 0, 0, 0.911);
+}
+.Product:hover{
+    height: 380px;
+    box-shadow: 7px 6px 12px #00000024;
+    transition: all 100ms ease-in;
+}
+.imageProduct{
+    height: 225px;
+    width: 100%;
+    border-bottom: 1px solid #00000024;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+}
+.imageProduct > img{
+    width: 100%;
+    object-fit: contain;
+}
+.descProduct{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+    padding: .6rem 1rem;
+}
+.price{
+    font-size: 1.6rem;
+    font-weight: 500;
+    opacity: .7;
+}
+.freight, .discount{
+    font-size: .8rem;
+    filter: brightness(.9);
+}
+.discount{
+    color: var(--green);
+}
+.freight{
+    color: #00a650;
+}
+.desc{
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.685);
+    font-weight: 300;
+    margin-top: .6rem;
+}
