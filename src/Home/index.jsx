@@ -1,22 +1,63 @@
-import CreditSession from "../components/CreditSession";
-import Header from "../components/Header";
-import Product from "../components/Product";
-import Offer from "../components/Offer";
-import Slide from "../components/Slide"
-import image01 from "../assets/image/1.png"
-import image02 from "../assets/image/2.png"
-import image03 from "../assets/image/3.png"
-
 import { BsFillCreditCard2BackFill, BsPlus } from "react-icons/bs"
+import { MdOutlinePhoneAndroid, MdOutlineDirectionsCarFilled } from "react-icons/md"
 import { GiReceiveMoney } from "react-icons/gi"
-import { MdOutlinePhoneAndroid } from "react-icons/md"
+
+import CreditSession from "../components/CreditSession";
+import CategoryItem from "../components/CategoryItem"
+import Product from "../components/Product";
+import Header from "../components/Header";
+import Slide from "../components/Slide"
+import Offer from "../components/Offer";
+
+import dell from "../assets/image/dell.webp"
+import watch from "../assets/image/watch.avif"
+import iphone from "../assets/image/iphone.webp"
+import tablet from "../assets/image/tablet.webp"
+import cam from "../assets/image/cam.webp"
+
 import "./style.css"
 
 function Home() {
     const product = [
         {
+            nome: "Smartwatch Samsung Galaxy Watch",
+            preco: 1599,
+            foto: watch,
+            descricao: "Smartwatch Samsung Galaxy Watch Active 2",
+            parcelas: "10x R$ 160 sem juros"
+        },
+        {
+            nome: "Smartphone Apple iPhone 13",
+            preco: 6999,
+            foto: iphone,
+            descricao: "Smartphone Apple iPhone 13, 128GB",
+            parcelas: "10x R$ 700 sem juros"
+        },
+        {
+            nome: "Tablet Samsung Galaxy Tab S7+",
+            preco: 4599,
+            foto: tablet,
+            descricao: "Tablet Samsung Galaxy Tab S7+, 256GB",
+            parcelas: "10x R$ 460 sem juros"
+        },
+        {
             nome: "Notebook Dell Inspiron 15",
-            foto: image01,
+            foto: dell,
+            preco: 3270,
+            descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
+            parcelas: "10x R$ 327 sem juros"
+
+        },
+        {
+            nome: "Câmera Canon EOS R6",
+            preco: 16399,
+            foto: cam,
+            descricao: "Câmera Canon EOS R6 com Lente 24-105mm f/4L",
+            parcelas: "12x R$ 1.366,58 sem juros"
+        },
+        {
+            nome: "Notebook Dell Inspiron 15",
+            foto: dell,
             preco: 3270,
             descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
             parcelas: "10x R$ 327 sem juros"
@@ -25,45 +66,106 @@ function Home() {
         {
             nome: "Smartwatch Samsung Galaxy Watch",
             preco: 1599,
-            foto: image02,
+            foto: watch,
             descricao: "Smartwatch Samsung Galaxy Watch Active 2",
             parcelas: "10x R$ 160 sem juros"
         },
         {
             nome: "Smartphone Apple iPhone 13",
             preco: 6999,
-            foto: image03,
+            foto: iphone,
             descricao: "Smartphone Apple iPhone 13, 128GB",
             parcelas: "10x R$ 700 sem juros"
         },
         {
             nome: "Tablet Samsung Galaxy Tab S7+",
             preco: 4599,
-            foto: image01,
+            foto: tablet,
             descricao: "Tablet Samsung Galaxy Tab S7+, 256GB",
             parcelas: "10x R$ 460 sem juros"
         },
         {
-            nome: "Fone de ouvido Sony WH-1000XM4",
-            preco: 2399,
-            foto: image02,
-            descricao: "Fone de ouvido Sony WH-1000XM4, noise cancelling",
-            parcelas: "10x R$ 240 sem juros"
+            nome: "Notebook Dell Inspiron 15",
+            foto: dell,
+            preco: 3270,
+            descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
+            parcelas: "10x R$ 327 sem juros"
+
         },
         {
-            nome: "Caixa de som JBL Xtreme 3",
-            preco: 1299,
-            foto: image03,
-            descricao: "Caixa de som JBL Xtreme 3, Bluetooth",
-            parcelas: "10x R$ 130 sem juros"
+            nome: "Smartwatch Samsung Galaxy Watch",
+            preco: 1599,
+            foto: watch,
+            descricao: "Smartwatch Samsung Galaxy Watch Active 2",
+            parcelas: "10x R$ 160 sem juros"
         },
         {
-            nome: "Notebook Lenovo Ideapad 3i",
-            preco: 2499,
-            foto: image01,
-            descricao: "Notebook Lenovo Ideapad 3i, Intel Core i7, 8GB RAM",
-            parcelas: "10x R$ 250 sem juros"
+            nome: "Smartphone Apple iPhone 13",
+            preco: 6999,
+            foto: iphone,
+            descricao: "Smartphone Apple iPhone 13, 128GB",
+            parcelas: "10x R$ 700 sem juros"
         },
+        {
+            nome: "Tablet Samsung Galaxy Tab S7+",
+            preco: 4599,
+            foto: tablet,
+            descricao: "Tablet Samsung Galaxy Tab S7+, 256GB",
+            parcelas: "10x R$ 460 sem juros"
+        },
+        {
+            nome: "Notebook Dell Inspiron 15",
+            foto: dell,
+            preco: 3270,
+            descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
+            parcelas: "10x R$ 327 sem juros"
+
+        },
+        {
+            nome: "Câmera Canon EOS R6",
+            preco: 16399,
+            foto: cam,
+            descricao: "Câmera Canon EOS R6 com Lente 24-105mm f/4L",
+            parcelas: "12x R$ 1.366,58 sem juros"
+        },
+        {
+            nome: "Notebook Dell Inspiron 15",
+            foto: dell,
+            preco: 3270,
+            descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
+            parcelas: "10x R$ 327 sem juros"
+
+        },
+        {
+            nome: "Smartwatch Samsung Galaxy Watch",
+            preco: 1599,
+            foto: watch,
+            descricao: "Smartwatch Samsung Galaxy Watch Active 2",
+            parcelas: "10x R$ 160 sem juros"
+        },
+        {
+            nome: "Smartphone Apple iPhone 13",
+            preco: 6999,
+            foto: iphone,
+            descricao: "Smartphone Apple iPhone 13, 128GB",
+            parcelas: "10x R$ 700 sem juros"
+        },
+        {
+            nome: "Tablet Samsung Galaxy Tab S7+",
+            preco: 4599,
+            foto: tablet,
+            descricao: "Tablet Samsung Galaxy Tab S7+, 256GB",
+            parcelas: "10x R$ 460 sem juros"
+        },
+        {
+            nome: "Notebook Dell Inspiron 15",
+            foto: dell,
+            preco: 3270,
+            descricao: "Notebook Dell Inspiron 15, Intel Core i5, 8GB RAM",
+            parcelas: "10x R$ 327 sem juros"
+
+        },
+
     ]
     return (
         <>
@@ -71,9 +173,9 @@ function Home() {
             <main className="container">
                 <section className="slidePromotion">
                     <Slide>
-                        <img className="imageSlide" src={image01} alt="imagem 1" />
-                        <img className="imageSlide" src={image02} alt="imagem 2" />
-                        <img className="imageSlide" src={image03} alt="imagem 3" />
+                        <img className="imageSlide" src={dell} alt="imagem 1" />
+                        <img className="imageSlide" src={watch} alt="imagem 2" />
+                        <img className="imageSlide" src={iphone} alt="imagem 3" />
                     </Slide>
                 </section>
                 <section className="creditCard">
@@ -93,21 +195,21 @@ function Home() {
                 <Offer title="Ofertas do dia">
                     <Slide>
                         {
-                            product.map(el => <Product picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
+                            product.map((el, x) => <Product key={x} picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Baseada na sua última visita" link="Ver histórico">
                     <Slide>
                         {
-                            product.map(el => <Product picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
+                            product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Você também pode gostar" link="Ver histórico">
                     <Slide>
                         {
-                            product.map(el => <Product picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
+                            product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
@@ -137,6 +239,60 @@ function Home() {
                         <div className="itemsMarket"></div>
                         <div className="itemsMarket"></div>
                         <div className="itemsMarket"></div>
+                    </div>
+                </Offer>
+                <Offer title="Categorias populares">
+                    <div className="categoryContainer">
+                        <Slide>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                        </Slide>
                     </div>
                 </Offer>
             </main>

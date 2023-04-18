@@ -7,6 +7,9 @@
 .slidePromotion{
     margin-bottom: 3rem;
 }
+.slidePromotion > .slideContainer > .slides{
+    height: 395px;
+}
 .imageSlide{
     object-fit: cover;
     width: 100%;
@@ -161,7 +164,6 @@
     gap: 1rem;
 
 }
-
 .marketItemsContainer {
     display: flex;
     gap: 1rem;
@@ -172,4 +174,21 @@
     flex: 1;
     background-color: #a90f8fc4;
     border-radius: .5rem;
+}
+.categoryContainer{
+    background-color: white;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 3px #0000002b;
+}
+.categoryContainer > 
+.slideContainer > 
+.slides > .slideList {
+    display: flex;
+}
+.categoryContainer > .slideContainer > .slides{
+    height: 314px;
+}
+.categoryContainer > .slideContainer > .slides > .slideList {
+    gap: 0;
+    margin-left: .6rem;
 }
