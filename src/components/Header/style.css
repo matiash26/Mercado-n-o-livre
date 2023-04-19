@@ -22,6 +22,7 @@ nav {
     grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
     gap: 1rem;
 }
+
 .ad {
     max-width: 390px;
     width: 100%;
@@ -92,30 +93,88 @@ nav {
 }
 
 .menuList {
-    gap: 1rem;
+    gap: 1.2rem;
     display: flex;
     align-items: flex-end;
 }
-.menuList > li> a {
+
+.menuList>li>a {
     font-size: .840rem;
     color: rgba(0, 0, 0, 0.514);
     font-weight: 300;
 }
-.menuRight{
+
+.menuRight {
     display: flex;
     justify-content: flex-end;
 }
-.menuRight > li > a{
+
+.menuRight>li>a {
     color: rgba(0, 0, 0, 0.651);
     font-weight: 500;
 }
-.navRight > .ad {
+
+.navRight>.ad {
     height: 40px;
 }
+
 .logoAndLocation,
 .middleNav,
 .navRight {
     display: flex;
     flex-direction: column;
     gap: 1.1rem;
+}
+.submenuContainer {
+    position: relative;
+    margin-right: .4rem;
+    cursor: pointer;
+}
+.submenuContainer > a::after {
+    border-style: solid;
+    border-width: 0 1.5px 1.5px 0;
+    content: "";
+    display: inline-block;
+    height: 2px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 2px;
+    color: rgba(0,0,0,.3);
+    margin: 0;
+    bottom: 8px;
+    right: -12px;
+    position: absolute;
+    padding: 2px;
+}
+.subMenuList {
+    width: 233px;
+    position: absolute;
+    top: 2rem;
+    right: -1.3rem;
+    background-color: #333;
+    z-index: 2;
+    padding: 1rem 0;
+    border-radius: .3rem;
+}
+.subMenuList > a{
+    display: block;
+    padding: .6rem 2rem;
+}
+.subMenuList > a > li {
+    color: white;
+    text-decoration: none;
+    font-size: .8rem;
+}
+.subMenuList > a:hover{
+    background-color: var(--blue);
+}
+.subMenuList::after{
+    content: "";
+    width: 0;
+    height: 0;
+    border-right-width: 1rem;
+    border-left-width: 1rem;
+    position: absolute;
+    top: 0;
+    background-color: red;
 }

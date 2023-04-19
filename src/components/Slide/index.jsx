@@ -1,7 +1,7 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import { useEffect, useRef, useState } from "react";
 import "./style.css"
-function Slide({ children }) {
+function Slide({ children, onScreeen, step }) {
     const [position, setPosition] = useState(0)
     const slideRef = useRef(null);
 
@@ -14,13 +14,15 @@ function Slide({ children }) {
     }
     const next = () => {
         const max = countElement * width
-        position <  max ? setPosition(prev => prev + stepElement) : setPosition(max - (width * 4))
+        const limitPosition =  max - (width * onScreeen)
+        //o limitePosition vai dar um valor left exato para que não tenha espaço vazio no slide
+        position < limitPosition ? setPosition(prev => prev + stepElement) : setPosition(limitPosition)
     }
 
     useEffect(() => {
         countElement = slideRef.current.children.length
         width = slideRef.current.children[0].clientWidth
-        stepElement = width * 5
+        stepElement = width * step
     }, [position])
     return (
         <div className="slideContainer">
@@ -29,6 +31,7 @@ function Slide({ children }) {
                 <div className="slideList" style={{ right:`${position}px`}}ref={slideRef}>
                     {children}
                 </div>
+                {console.log(position)}
             </div>
             <div className="arrow rightArrow" onClick={next}>{<FiChevronRight />}</div>
         </div>

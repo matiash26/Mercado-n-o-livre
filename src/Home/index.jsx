@@ -1,6 +1,7 @@
-import { BsFillCreditCard2BackFill, BsPlus } from "react-icons/bs"
-import { MdOutlinePhoneAndroid, MdOutlineDirectionsCarFilled } from "react-icons/md"
-import { GiReceiveMoney } from "react-icons/gi"
+import { BsFillCreditCard2BackFill, BsPlus, BsMic, BsTools, BsController } from "react-icons/bs"
+import { MdOutlinePhoneAndroid, MdOutlineDirectionsCarFilled, MdMonitor } from "react-icons/md"
+import { GiReceiveMoney, GiSteeringWheel, GiLipstick, GiBearFace, GiTShirt, GiSmartphone, GiSoccerBall, GiModernCity } from "react-icons/gi"
+import { TbArmchair } from "react-icons/tb"
 
 import CreditSession from "../components/CreditSession";
 import CategoryItem from "../components/CategoryItem"
@@ -14,6 +15,10 @@ import watch from "../assets/image/watch.avif"
 import iphone from "../assets/image/iphone.webp"
 import tablet from "../assets/image/tablet.webp"
 import cam from "../assets/image/cam.webp"
+
+import slide01 from "../assets/image/slide01.png"
+import slide02 from "../assets/image/slide02.png"
+import slide03 from "../assets/image/slide03.png"
 
 import "./style.css"
 
@@ -172,10 +177,10 @@ function Home() {
             <Header />
             <main className="container">
                 <section className="slidePromotion">
-                    <Slide>
-                        <img className="imageSlide" src={dell} alt="imagem 1" />
-                        <img className="imageSlide" src={watch} alt="imagem 2" />
-                        <img className="imageSlide" src={iphone} alt="imagem 3" />
+                    <Slide onScreeen={1} step={1}>
+                        <img className="imageSlide" src={slide01} alt="imagem 1" />
+                        <img className="imageSlide" src={slide02} alt="imagem 2" />
+                        <img className="imageSlide" src={slide03} alt="imagem 3" />
                     </Slide>
                 </section>
                 <section className="creditCard">
@@ -193,21 +198,21 @@ function Home() {
                     </div>
                 </section>
                 <Offer title="Ofertas do dia">
-                    <Slide>
+                    <Slide onScreeen={5} step={3}>
                         {
                             product.map((el, x) => <Product key={x} picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Baseada na sua última visita" link="Ver histórico">
-                    <Slide>
+                    <Slide onScreeen={5} step={3}>
                         {
                             product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Você também pode gostar" link="Ver histórico">
-                    <Slide>
+                    <Slide onScreeen={5} step={3}>
                         {
                             product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
@@ -243,54 +248,50 @@ function Home() {
                 </Offer>
                 <Offer title="Categorias populares">
                     <div className="categoryContainer">
-                        <Slide>
+                        <Slide onScreeen={7} step={3}>
                             <div>
                                 <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Acessórios para Veículos" icon={<GiSteeringWheel />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Beleza e Cuidado Pessoal" icon={<GiLipstick />} />
+                                <CategoryItem text="Binruqedos e Hobbies" icon={<GiBearFace />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Calçados, Roupas e Bolsas" icon={<GiTShirt />} />
+                                <CategoryItem text="Casa, Móvies e Decoração" icon={<TbArmchair />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Celulares e Telefones" icon={<GiSmartphone />} />
+                                <CategoryItem text="Eletrodomésticos" icon={<MdOutlineDirectionsCarFilled />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Eletrônicos, Áudio e Vídeo" icon={<BsMic />} />
+                                <CategoryItem text="Esportes e Ftiness" icon={<GiSoccerBall />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Beleza e Cuidado Pessoal" icon={<GiLipstick />} />
+                                <CategoryItem text="Binruqedos e Hobbies" icon={<GiBearFace />} />
+                            </div>
+                            <div>
+                                <CategoryItem text="Calçados, Roupas e Bolsas" icon={<GiTShirt />} />
+                                <CategoryItem text="Casa, Móvies e Decoração" icon={<TbArmchair />} />
                             </div>
                             <div>
                                 <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Acessórios para Veículos" icon={<GiSteeringWheel />} />
                             </div>
                             <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Beleza e Cuidado Pessoal" icon={<GiLipstick />} />
+                                <CategoryItem text="Binruqedos e Hobbies" icon={<GiBearFace />} />
                             </div>
                             <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Calçados, Roupas e Bolsas" icon={<GiTShirt />} />
+                                <CategoryItem text="Casa, Móvies e Decoração" icon={<TbArmchair />} />
                             </div>
                             <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                            </div>
-                            <div>
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
-                                <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
+                                <CategoryItem text="Eletrônicos, Áudio e Vídeo" icon={<BsMic />} />
+                                <CategoryItem text="Esportes e Ftiness" icon={<GiSoccerBall />} />
                             </div>
                         </Slide>
                     </div>
