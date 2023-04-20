@@ -6,8 +6,12 @@ import { useState } from "react"
 
 function Header() {
     const [menuModal, setMenuModal] = useState(false)
-    const openMenu = () =>{
+    const [menuMobile, setMenuMobile] = useState(false)
+    const openMenu = () => {
         setMenuModal(prev => !prev)
+    }
+    const openMenuMobile = () => {
+        setMenuMobile(prev => !prev)
     }
     return (
         <header>
@@ -25,10 +29,10 @@ function Header() {
                             <input type="text" placeholder="Buscar produtos, marcas e muito mais..." />
                             <IoIosSearch />
                         </div>
-                        <ul className="menuList">
+                        <ul className={`menuList ${menuMobile && "menuMobileOpen"}`} >
                             <li className="submenuContainer" onClick={openMenu}>
                                 <a>Categorias</a>
-                                <ul className="subMenuList" style={{display: `${menuModal ? "block" : "none"}`}}>
+                                <ul className={`subMenuList ${menuModal && "show"}`}>
                                     <a href="#"><li>Veículos</li></a>
                                     <a href="#"><li>Supermercado</li></a>
                                     <a href="#"><li>Tecnologia</li></a>
@@ -62,6 +66,11 @@ function Header() {
                     <div className="navRight right">
                         <div className="ad">
                             <span>PROPAGANDA</span>
+                        </div>
+                        <div className="mobileMenu" onClick={openMenuMobile}>
+                            <span></span>
+                            <span></span>
+                            <span></span>
                         </div>
                         <ul className="menuList menuRight">
                             <li><a href="#">Crie a sua conta</a></li>
