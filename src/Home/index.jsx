@@ -28,7 +28,7 @@ function Home() {
             preco: 1599,
             foto: watch,
             descricao: "Smartwatch Samsung Galaxy Watch Active 2",
-            parcelas: "10x R$ 160 sem juros"
+            parcelas: "10x R$ 10 sem juros"
         },
         {
             nome: "Smartphone Apple iPhone 13",
@@ -54,7 +54,7 @@ function Home() {
         },
         {
             nome: "Câmera Canon EOS R6",
-            preco: 16399,
+            preco: 1399,
             foto: cam,
             descricao: "Câmera Canon EOS R6 com Lente 24-105mm f/4L",
             parcelas: "12x R$ 1.366,58 sem juros"
@@ -72,7 +72,7 @@ function Home() {
             preco: 1599,
             foto: watch,
             descricao: "Smartwatch Samsung Galaxy Watch Active 2",
-            parcelas: "10x R$ 160 sem juros"
+            parcelas: "10x R$ 10 sem juros"
         },
         {
             nome: "Smartphone Apple iPhone 13",
@@ -101,7 +101,7 @@ function Home() {
             preco: 1599,
             foto: watch,
             descricao: "Smartwatch Samsung Galaxy Watch Active 2",
-            parcelas: "10x R$ 160 sem juros"
+            parcelas: "10x R$ 10 sem juros"
         },
         {
             nome: "Smartphone Apple iPhone 13",
@@ -127,7 +127,7 @@ function Home() {
         },
         {
             nome: "Câmera Canon EOS R6",
-            preco: 16399,
+            preco: 1399,
             foto: cam,
             descricao: "Câmera Canon EOS R6 com Lente 24-105mm f/4L",
             parcelas: "12x R$ 1.366,58 sem juros"
@@ -145,7 +145,7 @@ function Home() {
             preco: 1599,
             foto: watch,
             descricao: "Smartwatch Samsung Galaxy Watch Active 2",
-            parcelas: "10x R$ 160 sem juros"
+            parcelas: "10x R$ 10 sem juros"
         },
         {
             nome: "Smartphone Apple iPhone 13",
@@ -174,7 +174,7 @@ function Home() {
     return (
             <main className="container">
                 <section className="slidePromotion">
-                    <Slide onScreeen={1} step={1}>
+                    <Slide onScreeen={1} step={1} px={16}>
                         <img className="imageSlide" src={slide01} alt="imagem 1" />
                         <img className="imageSlide" src={slide02} alt="imagem 2" />
                         <img className="imageSlide" src={slide03} alt="imagem 3" />
@@ -195,21 +195,21 @@ function Home() {
                     </div>
                 </section>
                 <Offer title="Ofertas do dia">
-                    <Slide onScreeen={5} step={3}>
+                    <Slide onScreeen={5} step={3} px={16}>
                         {
                             product.map((el, x) => <Product key={x} picture={el?.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Baseada na sua última visita" link="Ver histórico">
-                    <Slide onScreeen={5} step={3}>
+                    <Slide onScreeen={5} step={3} px={16}>
                         {
                             product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
                     </Slide>
                 </Offer>
                 <Offer title="Você também pode gostar" link="Ver histórico">
-                    <Slide onScreeen={5} step={3}>
+                    <Slide onScreeen={5} step={3} px={16}>
                         {
                             product.map((el, x) => <Product key={x} picture={el.foto} price={el.preco} discount={el.parcelas} description={el.descricao} />)
                         }
@@ -245,7 +245,7 @@ function Home() {
                 </Offer>
                 <Offer title="Categorias populares">
                     <div className="categoryContainer">
-                        <Slide onScreeen={7} step={3}>
+                        <Slide onScreeen={7} step={3} px={0}>
                             <div>
                                 <CategoryItem text="Carros, Motos e Outros" icon={<MdOutlineDirectionsCarFilled />} />
                                 <CategoryItem text="Acessórios para Veículos" icon={<GiSteeringWheel />} />

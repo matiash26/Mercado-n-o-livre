@@ -10,7 +10,7 @@
 }
 .slideList{
     display: flex;
-    width: 400%;
+    width: auto;
     height: 100%;
     gap: 1rem;
     position: relative;
