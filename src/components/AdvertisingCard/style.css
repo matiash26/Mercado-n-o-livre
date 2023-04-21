@@ -1,0 +1,35 @@
+.AdvertisingCard{
+    height:180px; 
+    max-width:330px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+}
+.AdvertisingCard > svg{
+    font-size: 4rem;
+    flex-shrink: 0;
+    color: var(--blue);
+}
+.AdvertisingCard > h3{
+    font-weight: 500;
+    opacity: .7;
+}
+.AdvertisingCard > p{
+    padding-top: .5rem;
+    font-size: .8rem;
+    opacity: .6;
+    text-align: center;
+}
+.AdvertisingCard > a{
+    color: var(--blue);
+    font-weight: 500;
+    font-size: .8rem;
+    color: var(--blue);
+    text-decoration: none;
+    transition: .1s;
+    font-weight: 500;
+}

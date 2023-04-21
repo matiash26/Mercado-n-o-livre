@@ -1,0 +1,119 @@
+footer{
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    margin-top: 4rem;
+    background-color: white;
+    transition: height .2s ease-in;
+}
+.footerSection{
+    max-width: 1186px;
+    width: 100%;
+    margin: auto;
+    padding: 3rem 0;
+}
+.footer01{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.footerItemContainer{
+    padding: 2rem;
+}
+.footerItemContainer:nth-child(2){
+    border-right: 1px solid var(--gray);
+    border-left: 1px solid var(--gray);
+}
+.moreInfo{
+    background-color: var(--bg);
+    position: relative;
+    border-top: 1px solid var(--gray);
+    display: flex;
+    justify-content: center;
+}
+.moreInfo > button{
+    background-color: var(--bg);
+    padding: .5rem 1.6rem;
+    position: absolute;
+    top: -2.2rem;
+    z-index: 2;
+    font-weight: 100;
+    border-radius: .5rem .5rem 0 0;
+    font-size: .8rem;
+    border: 1px solid var(--gray);
+    border-bottom: none;
+    cursor: pointer;
+    outline: none;
+}
+.footerSecond{
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    opacity: 0;
+    padding: 0;
+    transition: all .2s ease-in-out;
+}
+.footerSecond > ul {
+    text-align: left;
+}
+.footerSecond > ul > h5 {
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    opacity: .7;
+}
+.footerSecond > ul > li > a {
+    font-size: .78rem;
+    color: gray;
+    font-weight: 300;
+}
+.footerSecond > ul > li > a:hover{
+    text-decoration: underline;
+}
+.showFooter {
+    height: 270px;
+    opacity: 1;
+    transition: all .2s ease-in-out;
+    padding: 3rem 1rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 3rem;
+}
+.showFooter,
+.copyright{
+    max-width: 1186px;
+    width: 100%;
+    margin: auto;
+}
+.copyright {
+    padding: .5rem 1rem ;
+}
+.copyright > .info > a{
+    font-weight: 500;
+    font-size: .7rem;
+    margin-right: 1.6rem;
+    color: black;
+    opacity: .9;
+}
+
+.company > span{
+    font-size: .66rem;
+    opacity: .5;
+    display: block;
+}
+@media (max-width:1167px) {
+    .footer01{
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media (max-width:481px) {
+    .footerSecond{
+        overflow: auto;
+    }
+    .footerSecond > ul {
+        margin: 1;
+    }
+}

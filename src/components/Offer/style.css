@@ -25,3 +25,9 @@
     color: var(--deepBlue);
     transition: .1s;
 }
+@media (max-width:1237px) {
+    .offerDay{
+        padding: 0 1rem;
+        padding-top: 1.5rem;;
+    }
+}

@@ -6,7 +6,6 @@ import { TbArmchair } from "react-icons/tb"
 import CreditSession from "../components/CreditSession";
 import CategoryItem from "../components/CategoryItem"
 import Product from "../components/Product";
-import Header from "../components/Header";
 import Slide from "../components/Slide"
 import Offer from "../components/Offer";
 
@@ -173,8 +172,6 @@ function Home() {
 
     ]
     return (
-        <>
-            <Header />
             <main className="container">
                 <section className="slidePromotion">
                     <Slide onScreeen={1} step={1}>
@@ -297,7 +294,6 @@ function Home() {
                     </div>
                 </Offer>
             </main>
-        </>
     )
 }
 export default Home;

@@ -2,7 +2,7 @@ header {
     width: 100vw;
     height: 6.3rem;
     background-color: var(--yellow);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.041);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.205);
 }
 
 nav {
@@ -19,6 +19,7 @@ nav {
 .navContainer {
     height: 100%;
     display: grid;
+    justify-content: space-between;
     grid-template-columns: 162px minmax(340px, 580px) minmax(350px, 390px);
     gap: 1rem;
 }
@@ -157,11 +158,12 @@ nav {
     padding: 2px;
 }
 .subMenuList {
+    display: none;
     width: 233px;
     position: absolute;
     top: 2rem;
     right: -1.3rem;
-    background-color: #333;
+    background-color: var(--gray);
     z-index: 2;
     padding: 1rem 0;
     border-radius: .3rem;
@@ -188,3 +190,100 @@ nav {
     top: 0;
     background-color: red;
 }
+<<<<<<< HEAD
+=======
+.mobileMenu{
+    display: none;
+}
+.mobileMenu > span {
+    display: block;
+    width: 1.5rem;
+    height: .1rem;
+    background-color: black;
+    opacity: .6;
+    margin-top: .4rem;
+}
+/* menu mobile */
+.menuMobileOpen{
+    display: flex !important;
+    flex-direction: column; 
+    align-items: start;
+    position: absolute;
+    width: 100vw;
+    min-height: 45vh;
+    top: 5.9rem;
+    right: -5.8rem;
+    z-index: 2;
+    background-color: var(--bg);
+    padding: 0 2rem;
+    gap: 0;
+    
+}
+.menuMobileOpen > li{
+    width: 100%;
+    background-color: white;
+    border-bottom: .1rem solid var(--gray);
+} 
+.menuMobileOpen > li > a{
+    width: 100%; 
+    display: block; 
+    padding: .5rem;
+    font-weight: 500;
+    padding: 1.2rem 1.3rem;
+}
+
+.menuMobileOpen > li:nth-child(2){
+    border-radius: .5rem .5rem 0 0;
+}
+.menuMobileOpen > li:nth-last-child(1){
+    border-radius: 0 0 .5rem .5rem !important;
+}
+.menuMobileOpen > .submenuContainer:hover
+{
+    background-color: transparent;
+}
+/* FIM */
+.menu.show{
+    display: block;
+}
+@media (max-width:1229px) {
+    .ad, .menuRight, .subMenuList, .menuList{
+        display: none;
+    }
+    .mobileMenu{
+        display: flex;
+        flex-direction: column;
+        margin-left: 1rem;
+        height: 40px;
+        justify-content: center;
+    }
+    .navRight{
+        align-items: flex-end;
+    }
+    .navContainer{
+        padding: 0 2rem;
+        display: flex;
+    }
+    .middleNav{
+        flex: 1;
+        width: 100%;
+        position: relative;
+    }
+    .inputContainer{
+        max-width: 100%;
+    }
+    .subMenuList{
+        display: none;
+    }
+    .submenuContainer > a:nth-child(1)::after{
+        display: none;
+    }
+    .submenuContainer > a:nth-child(1){
+        font-weight: 500;
+        font-size: 1.2rem;
+        padding: 1rem 1.4rem;
+        background-color: var(--bg);
+    }
+
+}
+>>>>>>> 070a9c1391acb627752ea2e85aa2019a4095b1d3
