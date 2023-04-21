@@ -42,6 +42,7 @@
 
 .firstElement {
     padding: 1.2rem 1rem;
+    margin-left: .3rem;
     border-right: 1px solid rgba(128, 128, 128, 0.411);
 }
 
@@ -85,6 +86,7 @@
 }
 .advertising{
     width: 100%;
+    margin-top: 2rem;
     box-shadow: 1px 1px 2px #00000024;
     border-bottom-left-radius: .3rem;
     border-bottom-right-radius: .3rem;

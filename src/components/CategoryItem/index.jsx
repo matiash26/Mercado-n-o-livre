@@ -1,10 +1,10 @@
 import "./style.css"
 function CategoryItem({ icon, text }) {
     return (
-        <div className="categoryItem">
+        <a href="#" className="categoryItem">
             {icon}
             <span>{text}</span>
-        </div>
+        </a>
     )
 }
 export default CategoryItem;

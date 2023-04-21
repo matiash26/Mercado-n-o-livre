@@ -5,14 +5,14 @@
     box-shadow: 1px 1px 2px #00000024;
     border-radius: .3rem;
     overflow: hidden;
-    transition: height 100ms ease-in;
+    transition: all .1s linear;
     color: rgba(0, 0, 0, 0.911);
     flex-shrink: 0;
 }
 .Product:hover{
     height: 380px;
     box-shadow: 7px 6px 12px #00000024;
-    transition: all 100ms ease-in;
+    transition: all .1s linear;
 }
 .imageProduct{
     height: 225px;
