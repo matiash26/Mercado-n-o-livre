@@ -197,40 +197,18 @@
     gap: 0;
     margin-left: .6rem;
 }
-<<<<<<< HEAD
-@media (max-width:1238px) {
-    .creditSession{
-        height: 90px;
-=======
 @media (max-width:1237px) {
     .creditSession:not(:nth-child(2)){
         display: none;
     }
     .creditSession:nth-child(2){
->>>>>>> 070a9c1391acb627752ea2e85aa2019a4095b1d3
         display: flex;
         align-items: center;
         position: relative;
         margin: auto;
-<<<<<<< HEAD
-    }
-    .firstElement,.lastElement{
-        display: none;
-    }
-    .creditSession:not(:nth-child(2)){
-        display: none;
-        margin: auto;
-    }
-    nav{
-        padding: 0 1rem;
-        padding-top: 0.5rem; 
-    }
-
-=======
         height: 90px;
     }
     .firstElement, .lastElement{
         display: none;
     }
->>>>>>> 070a9c1391acb627752ea2e85aa2019a4095b1d3
 }

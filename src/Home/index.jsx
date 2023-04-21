@@ -224,7 +224,7 @@ function Home() {
                         </div>
                     </div>
                     <div className="descAdvertising">
-                        <h1>Conte com os melhores benefícios no Mercado Livre e do Mercado Pago</h1>
+                        <h1>Conte com os melhores benefícios no Mercado Não Livre e do Mercado Não Pago</h1>
                     </div>
                     <div className="sponsors">
                         <CreditSession icon={<BsFillCreditCard2BackFill />} title="empresa + sem custo" />
