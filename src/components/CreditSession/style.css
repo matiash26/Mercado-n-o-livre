@@ -4,7 +4,7 @@
 .creditSession > .icon{
     padding: .8rem;
     border-radius: 50%;
-    border: 1px solid rgba(128, 128, 128, 0.212);
+    border: 1px solid var(--gray);
     display: flex;
     align-items: center;
     justify-content: center;
