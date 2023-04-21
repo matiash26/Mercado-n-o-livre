@@ -1,5 +1,6 @@
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi"
 import { useEffect, useRef, useState } from "react";
+import Arrow from "../Arrow";
 import "./style.css"
 function Slide({ children, onScreeen, step }) {
     const [position, setPosition] = useState(0)
@@ -14,9 +15,9 @@ function Slide({ children, onScreeen, step }) {
     }
     const next = () => {
         const max = countElement * width
-        const limitPosition =  max - (width * onScreeen)
-        //o limitePosition vai dar um valor left exato para que não tenha espaço vazio no slide
+        const limitPosition = max - (width * onScreeen)
         position < limitPosition ? setPosition(prev => prev + stepElement) : setPosition(limitPosition)
+        //o limitePosition vai dar um valor left exato para que não tenha espaço vazio no slide
     }
 
     useEffect(() => {
@@ -26,15 +27,14 @@ function Slide({ children, onScreeen, step }) {
     }, [position])
     return (
         <div className="slideContainer">
-            <div className="arrow leftArrow" onClick={prev}><FiChevronLeft /></div>
+            <Arrow btn={prev} icon={<FiChevronLeft />} side="leftArrow" />
             <div className="slides">
-                <div className="slideList" style={{ right:`${position}px`}}ref={slideRef}>
+                <div className="slideList" style={{ right: `${position}px` }} ref={slideRef}>
                     {children}
                 </div>
-                {console.log(position)}
             </div>
-            <div className="arrow rightArrow" onClick={next}>{<FiChevronRight />}</div>
+            <Arrow btn={next} icon={<FiChevronRight />} side="rightArrow"/>
         </div>
     )
 }
-export default Slide
+export default Slide;

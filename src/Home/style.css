@@ -194,3 +194,24 @@
     gap: 0;
     margin-left: .6rem;
 }
+@media (max-width:1238px) {
+    .creditSession{
+        height: 90px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: auto;
+    }
+    .firstElement,.lastElement{
+        display: none;
+    }
+    .creditSession:not(:nth-child(2)){
+        display: none;
+        margin: auto;
+    }
+    nav{
+        padding: 0 1rem;
+        padding-top: 0.5rem; 
+    }
+
+}
