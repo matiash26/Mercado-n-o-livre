@@ -11,7 +11,7 @@ function Slide({ children, onScreeen, step, px }) {
     let stepElement = null
     
     const prev = () => {
-       setPosition(prev => prev < 0 ? prev - stepElement : 0)
+       setPosition(prev => prev - stepElement < 0 ? 0 : prev - stepElement)
     }
     const next = () => {
         const max = (countElement * width) + (countElement * px)
