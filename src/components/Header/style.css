@@ -163,7 +163,7 @@ nav {
     position: absolute;
     top: 2rem;
     right: -1.3rem;
-    background-color: var(--gray);
+    background-color: var(--deepGray);
     z-index: 2;
     padding: 1rem 0;
     border-radius: .3rem;
@@ -240,10 +240,11 @@ nav {
 {
     background-color: transparent;
 }
-/* FIM */
-.menu.show{
+.show {
     display: block;
 }
+/* FIM */
+
 @media (max-width:1229px) {
     .ad, .menuRight, .subMenuList, .menuList{
         display: none;
